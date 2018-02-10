@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('Raleway-Regular.eot');
+  src: url('Raleway-Regular.eot?#iefix') format('embedded-opentype'), url('Raleway-Regular.woff2') format('woff2'), url('Raleway-Regular.woff') format('woff'), url('Raleway-Regular.ttf') format('truetype'), url('Raleway-Regular.svg#Raleway-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'a_FuturaRound';
+  src: url('AFuturaRoundBold.eot');
+  src: url('AFuturaRoundBold.eot?#iefix') format('embedded-opentype'), url('AFuturaRoundBold.woff2') format('woff2'), url('AFuturaRoundBold.woff') format('woff'), url('AFuturaRoundBold.ttf') format('truetype'), url('AFuturaRoundBold.svg#AFuturaRoundBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vogue_Cyr';
+  src: url('VogueCyrBold.eot');
+  src: url('VogueCyrBold.eot?#iefix') format('embedded-opentype'), url('VogueCyrBold.woff2') format('woff2'), url('VogueCyrBold.woff') format('woff'), url('VogueCyrBold.ttf') format('truetype'), url('VogueCyrBold.svg#VogueCyrBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.main {
+  background: #000000 url(../img/main-bg1.jpg) center center no-repeat;
+  overflow-x: hidden;
+  background-size: cover;
+  width: 100%;
+  margin: 0 !important;
+}
+.main-caption {
+  color: white;
+  height: 108vh;
+  display: table;
+}
+.main-caption .cap-wrap {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 100vh;
+}
+.main-caption h1 {
+  position: absolute;
+  z-index: 9999;
+  width: 50rem;
+  font-size: 52px;
+  margin-top: 2.5rem;
+  margin-left: 13rem;
+}
+.main-caption h2 {
+  background-color: #243339;
+  display: inline-block;
+  margin-top: -0.7rem;
+  padding: 1rem 2.5rem;
+  font-size: 28px;
+}
+.row {
+  width: 100%;
+  margin: 0 !important;
+}
+.sidebar-lf {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.sidebar-lf-block {
+  color: white;
+  display: block;
+  width: 27rem;
+  height: 28rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  margin-bottom: .5rem;
+  background-color: rgba(36, 51, 57, 0.9);
+}
+.sidebar-lf-block h3 {
+  font-family: 'a_FuturaRound', sans-serif;
+}
+.sidebar-lf-block p {
+  font-size: 1.4rem;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.sidebar-lf-block img {
+  width: 8rem;
+  display: inline;
+}
+.paralelogramm {
+  width: 100%;
+  height: 100px;
+  background: #029474;
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+  -webkit-box-shadow: 0 0.5rem 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.5rem 5px rgba(0, 0, 0, 0.5);
+}
+.sidebar-rt {
+  text-align: right;
+  margin-right: 0;
+}
+.sidebar-rt .rt-wrap {
+  display: inline-block;
+  text-align: left;
+  width: 200%;
+  margin-left: 40%;
+  background-color: #243339;
+}
+.sidebar-rt .rt-wrap .logo-and-text {
+  width: 190px;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+.sidebar-rt .rt-wrap .logo-and-text img {
+  width: 220px;
+  margin-bottom: -10px;
+}
+.sidebar-rt .rt-wrap .logo-and-text p {
+  color: white;
+  z-index: 9999;
+  font-size: 13px;
+  margin-top: -10px;
+}
+.sidebar-rt .rt-wrap hr {
+  opacity: 0.05;
+}
+.sidebar-rt .rt-wrap ul {
+  color: white;
+  z-index: 9999;
+  margin-top: 3rem;
+  width: 28rem;
+}
+.sidebar-rt .rt-wrap ul li {
+  list-style-type: none;
+}
+.sidebar-rt .rt-wrap ul li hr {
+  margin-top: -0.05vh;
+}
+.sidebar-rt .rt-wrap ul a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-left: 7px;
+  margin-bottom: -150px;
+}
+.sidebar-rt .rt-wrap ul a .first {
+  margin-left: 14.2vh;
+}
+.sidebar-rt .rt-wrap ul a .second {
+  margin-left: 9.8vh;
+}
+.sidebar-rt .rt-wrap .task {
+  margin-top: 50rem;
+  background-color: #1E2C30;
+  width: 100%;
+  height: 11vh;
+  color: white;
+  display: table;
+}
+.sidebar-rt .rt-wrap .task-wrap {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.sidebar-rt .rt-wrap .task-wrap p {
+  font-size: 10px;
+  margin-bottom: -10px;
+  margin-left: 80px;
+  margin-top: 5px;
+}
+.sidebar-rt .rt-wrap .yellow {
+  background-color: #E9C845;
+  display: inline-block;
+  width: 22vh;
+  height: 5vh;
+  color: black;
+  font-size: 1.5rem;
+}
+.sidebar-rt .rt-wrap .yellow .wrap {
+  height: 5vh;
+  line-height: 5vh;
+}
+.sidebar-rt .rt-wrap .yellow .red {
+  background-color: red;
+  display: inline;
+  height: 30px;
+  width: 30px;
+}
+.sidebar-rt .rt-wrap .contacts {
+  font-size: 17px;
+  color: white;
+  font-family: arial, sans-serif;
+  margin-bottom: 2.5vh;
+}
+.sidebar-rt .rt-wrap .contacts .left {
+  margin-top: 3vh;
+  margin-left: 2vh;
+  display: inline-block;
+}
+.sidebar-rt .rt-wrap .contacts .left .phone-number {
+  margin-bottom: 0.6vh;
+  opacity: .6;
+}
+.sidebar-rt .rt-wrap .contacts .left .email {
+  opacity: .6;
+}
+.sidebar-rt .rt-wrap .contacts .right {
+  display: inline-block;
+  margin-left: 4vh;
+}
+.sidebar-rt .rt-wrap .contacts .right button {
+  border: 2px solid #025F55;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.8rem;
+  padding: 0.3vh;
+}
+.sidebar-rt .rt-wrap .contacts .right i {
+  display: block;
+  color: #025F55;
+  margin-top: 1vh;
+  margin-left: 8vh;
+}
+@media(max-width: 1680px) {
+  .cap-wrap h1{
+    margin-left: 8vh;
+  }
+}
+@media(max-width: 1536px) {
+  .cap-wrap h1{
+     margin-left: 5vh;
+     font-size: 44px;
+   }
+  .cap-wrap h2 {
+    font-size: 24px;  
+  }
+}
+@media(max-width: 1440px) {
+  .cap-wrap h1{
+     margin-left: 5vh;
+     font-size: 40px;
+   }
+   .cap-wrap h2 {
+    font-size: 22px;  
+  }
+  .right button{
+    margin-top: 20px;
+    width: 15rem;
+    font-size: 22px;
+    margin-left: -1.5vh;
+  }
+  .email, .phone-number {
+    font-size: 15px;
+  }
+}
+@media(max-width: 1280px) {
+  .cap-wrap h1{
+     margin-left: 1vh;
+     font-size: 36px;
+   }
+   .cap-wrap h2 {
+    font-size: 18px;  
+  }
+  .right button{
+    margin-top: 20px;
+    font-size: 1px;
+    margin-left: -2.5vh;
+  }
+  .btn-txt {
+    font-size: 14px;
+    width: 10.5rem;
+  }
+  .email, .phone-number {
+    font-size: 14px;
+  }
+  .sidebar-rt .rt-wrap ul a .first {
+    margin-left: 14.8vh;
+  }
+  .sidebar-rt .rt-wrap ul a .second {
+  margin-left: 9.8vh;
+  }
+}
+@media(max-width: 1152px) {
+  .right button {
+  }
+  .btn-text {
+    font-size: 9px;
+    width: 10rem;
+  }
+}
