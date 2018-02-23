@@ -1,0 +1,99 @@
+@import "http://fonts.fontstorage.com/import/akrobat.css";
+@font-face {
+  font-family: 'Igra Sans';
+  src: url(../fonts/IgraSans.eot);
+  src: url(../fonts/IgraSans.eot?#iefix) format('embedded-opentype'), url(../fonts/IgraSans.woff2) format('woff2'), url(../fonts/IgraSans.woff) format('woff'), url(../fonts/IgraSans.ttf) format('truetype'), url(../fonts/IgraSans.svg#IgraSans) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.main {
+  background: url(../img/main-slider/main-bg-1.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: 0;
+}
+.main .header {
+  display: table;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 120rem;
+  height: 14rem;
+  margin: 0 auto;
+  margin-top: 0;
+  color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.main .header-dashed-links {
+  color: gray;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-family: 'Igra Sans';
+}
+.main .header-dashed-links a {
+  text-decoration: none;
+  color: gray;
+}
+.main .header-dashed-links span {
+  font-size: 1.1rem;
+  border-bottom: gray dashed 1px;
+  margin-left: 0.8rem;
+}
+.main .header .contacts {
+  display: inline-block;
+}
+.main .header .contacts .phone {
+  font-size: 1.8rem;
+  color: gray;
+  margin-left: .3rem;
+  margin-bottom: 0rem;
+  font-family: 'Igra Sans';
+}
+.main .header .contacts .phone span {
+  font-size: 2.9rem;
+}
+.main .header .nav-bar {
+  display: inline-block;
+}
+.main .header .nav-icon {
+  color: gray;
+  display: inline-block;
+  min-width: 5.5rem;
+  margin-right: 3rem;
+  text-align: center;
+}
+.main .header .nav-icon a {
+  color: gray;
+  text-decoration: none;
+}
+.main .header .nav-icon p {
+  font-family: 'Igra Sans';
+  font-size: 1.3rem;
+}
+.main .header .nav-icon img {
+  margin-bottom: -1.5rem;
+  width: 2.3rem;
+}
+.main .header-all {
+  padding-left: 4.2rem;
+  height: 5.5rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+.main .header-all .logo {
+  height: 5rem;
+  margin-right: 5rem;
+}
+.main .header-block {
+  border: 2px dashed gray;
+  border-radius: 0 0 1rem 1rem;
+  padding-bottom: 0.5rem;
+  width: 121rem;
+  margin: 0 auto;
+  border-top: none;
+}
