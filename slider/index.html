@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Слайдер</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="slider wow bounceInLeft">
+		<div class="slider-item slider-item1"><h1 class="nadoela">Надоела халтура Вебмастеров в GGL и других биржах вечных ссылок?</h1></div>
+		<div class="slider-item slider-item2"> 
+			<h1 class="want">Хочеш так?</h1>
+			<img src="img/want1.png" class="want-img wi1" style="display: inline;" alt="">
+			<img src="img/want2.png" class="want-img" style="display: inline;" alt="">
+			<img src="img/wnat3.png" class="want-img" style="display: inline;" alt="">
+			<img src="img/want4.png" class="want-img" style="display: inline;" alt=""></div>
+		<div class="slider-item slider-item3">
+			<h1 class="dont-want">И НЕ хочеш так?</h1>
+			<img src="img/dont-want1.png" class="want-img wi1" style="display: inline;" alt="">
+			<img src="img/dont-want2.png" class="want-img" style="display: inline;" alt="">
+			<img src="img/dont-want3.png" class="want-img" style="display: inline;" alt="">
+			<img src="img/dont-want4.png" class="want-img" style="display: inline;" alt="">
+		</div>
+		<div class="slider-item slider-item4">
+			<img src="img/header.png" alt="" class="header">
+		</div>
+		</div>
+		</div>
+	</div>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="js/slick-theme/slick.css">
+	<script src="js/slick/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('.slider').slick({
+		    	autoplaySpeed: 5000,
+		    	prevArrow: '<button class="feat-sl-ar feat-sl-ar-l"><img src=img/prev-arrow.png></button>',
+		    	nextArrow: '<button class="feat-sl-ar feat-sl-ar-r"><img src=img/next-arrow.png></button>'
+			  });
+		});
+	</script>
+	<script>
+  	var wow = new WOW;
+  	wow.init();
+  </script>
+</body>
+</html>
