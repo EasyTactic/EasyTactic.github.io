@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/9688.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Tahomabd";
+  src: url("../fonts/tahomabd (1).ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Tahoma";
+  color: #333333;
+}
+.all-thanks-contant {
+  background: url(../img/thanks.jpg) repeat;
+}
+.main {
+  text-align: center;
+}
+.main-capt {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-top: 11rem;
+}
+.main-nearest {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 1.5rem;
+}
+.main-please {
+  font-size: 1.68rem;
+  margin-top: 1.5rem;
+  font-family: "Tahomabd";
+}
+.main .contact-block {
+  font-family: "Tahomabd";
+  width: 260px;
+  margin: 0 auto;
+  line-height: 16px;
+  font-size: 1.45rem;
+  text-align: left;
+}
+.main .contact-block-name {
+  margin-top: 0.5rem;
+}
+.main-if-miss {
+  font-size: 1.48rem;
+}
+.main-if-miss a {
+  color: #2BBAFE;
+  text-decoration: underline;
+  -webkit-transition: .1s all;
+  transition: .1s all;
+}
+.main-if-miss a:hover {
+  color: #0195db;
+}
+.other {
+  color: black;
+  text-align: center;
+  font-family: "Tahomabd";
+  margin-bottom: 9rem;
+}
+.other-vigoda {
+  font-size: 2.4rem;
+  margin-top: 2.7rem;
+}
+.other-dobav {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.other .price-block {
+  border: 1px solid #5D5D5D;
+  width: 334px;
+}
+.other .descp-block {
+  height: 19rem;
+  padding: 0 1rem;
+  background-color: white;
+}
+.other .descp-block-list {
+  list-style-type: none;
+  margin-left: -15%;
+}
+.other .item-link {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-size: 1.8rem;
+  line-height: 21px;
+}
+@media (min-width: 1005px) {
+  .container {
+    width: 1005px;
+  }
+}
+@media (max-width: 1004px) {
+  .main-capt {
+    font-size: 3.4rem;
+    margin-top: 8rem;
+  }
+  .main-nearest {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+  .main-please {
+    font-size: 1.68rem;
+  }
+  .main .contact-block {
+    font-family: "Tahomabd";
+    width: 260px;
+    margin: 0 auto;
+    line-height: 16px;
+    font-size: 1.45rem;
+    text-align: left;
+  }
+  .main .contact-block-name {
+    margin-top: 0.5rem;
+  }
+  .main-if-miss {
+    font-size: 1.7rem;
+  }
+  .main-if-miss a {
+    color: #2BBAFE;
+    text-decoration: underline;
+    -webkit-transition: .1s all;
+    transition: .1s all;
+  }
+  .main-if-miss a:hover {
+    color: #0195db;
+  }
+  .other {
+    color: black;
+    text-align: center;
+    font-family: "Tahomabd";
+    margin-bottom: 8rem;
+  }
+  .other-vigoda {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .other-dobav {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .other-img {
+    width: 247px;
+  }
+  .other .price-block {
+    border: 1px solid #5D5D5D;
+    width: 248px;
+  }
+  .other .descp-block {
+    height: 19rem;
+    padding: 0 1rem;
+  }
+  .other .descp-block h3 {
+    font-size: 1.9rem;
+  }
+  .other .descp-block-list {
+    list-style-type: none;
+    margin-left: -15%;
+    font-size: 1.6rem;
+  }
+  .other .item-link {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 1.8rem;
+    line-height: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .other .row {
+    display: inline;
+  }
+  .item-link {
+    display: block;
+  }
+  .other {
+    margin-bottom: 8rem;
+  }
+  .other-vigoda {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .other-dobav {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .other-img {
+    width: 247px;
+  }
+  .other .price-block {
+    border: 1px solid #5D5D5D;
+    width: 248px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .other .descp-block {
+    height: 19rem;
+    padding: 0 1rem;
+  }
+  .other .descp-block h3 {
+    font-size: 1.9rem;
+  }
+  .other .descp-block-list {
+    list-style-type: none;
+    margin-left: -15%;
+    font-size: 1.6rem;
+  }
+  .other .item-link {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 1.8rem;
+    line-height: 21px;
+  }
+}

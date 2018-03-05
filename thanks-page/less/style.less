@@ -1,0 +1,231 @@
+@font-face {
+font-family: "Tahoma";  
+src: url("../fonts/9688.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal;
+ }
+@font-face {
+	font-family: "Tahomabd";  
+	src: url("../fonts/tahomabd (1).ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+ }
+*{
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+body {
+	font-family: "Tahoma";
+	color: #333333;
+}
+.all-thanks-contant {
+	background: url(../img/thanks.jpg) repeat;
+}
+.main {
+	text-align: center;
+	&-capt {
+		text-transform: uppercase;
+		font-size: 4rem;
+		font-weight: 900;
+		margin-top: 11rem;
+	}
+	&-nearest {
+		font-size: 1.5rem;
+		display: block;
+		margin-top: 1.5rem;
+	}
+	&-please {
+		font-size: 1.68rem;
+		margin-top: 1.5rem;
+		font-family: "Tahomabd";  
+	}
+	.contact-block {
+		font-family: "Tahomabd";
+		width: 260px;
+		margin: 0 auto;
+		line-height: 16px;
+		font-size: 1.45rem;
+		text-align: left;
+		&-name {
+			margin-top: 0.5rem;
+		}
+	}
+	&-if-miss {
+		font-size: 1.48rem;
+		a {
+			color: #2BBAFE;
+			text-decoration: underline;
+			transition: .1s all;
+
+			&:hover {
+				color: darken(#2BBAFE, 15%)
+			}
+		}
+	}
+}
+.other {
+	color: black;
+	text-align: center;
+	font-family: "Tahomabd";
+	margin-bottom: 9rem;
+	&-vigoda {
+		font-size: 2.4rem;
+		margin-top: 2.7rem;
+	}
+	&-dobav {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
+	.price-block {
+		border: 1px solid #5D5D5D;
+		width: 334px;
+	}
+	.descp-block {
+		height: 19rem;
+		padding: 0 1rem;
+		background-color: white;
+		&-list {
+			list-style-type: none;
+			margin-left: -15%;
+		}
+	}
+	.item-link {
+		text-decoration: none;
+		display: block;
+		color: black;
+		font-size: 1.8rem;
+		line-height: 21px;
+	}
+}
+@media (min-width: 1005px) {
+	.container {
+		width: 1005px;
+	}
+}
+@media (max-width: 1004px) {
+	.main {
+			&-capt {
+			font-size: 3.4rem;
+			margin-top: 8rem;
+		}
+		&-nearest {
+			font-size: 1.8rem;
+			margin-top: 1.5rem;
+		}
+		&-please {
+			font-size: 1.68rem;
+		}
+		.contact-block {
+			font-family: "Tahomabd";
+			width: 260px;
+			margin: 0 auto;
+			line-height: 16px;
+			font-size: 1.45rem;
+			text-align: left;
+			&-name {
+				margin-top: 0.5rem;
+			}
+		}
+		&-if-miss {
+			font-size: 1.7rem;
+			a {
+				color: #2BBAFE;
+				text-decoration: underline;
+				transition: .1s all;
+
+				&:hover {
+					color: darken(#2BBAFE, 15%)
+				}
+			}
+		}
+	}
+	.other {
+		color: black;
+		text-align: center;
+		font-family: "Tahomabd";
+		margin-bottom: 8rem;
+		&-vigoda {
+			font-size: 2rem;
+			margin-top: 3rem;
+		}
+		&-dobav {
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+		}
+		&-img {
+			width: 247px;
+		}
+		.price-block {
+			border: 1px solid #5D5D5D;
+			width: 248px;
+		}
+		.descp-block {
+			height: 19rem;
+			padding: 0 1rem;
+			h3 {
+				font-size: 1.9rem;
+			}
+			&-list {
+				list-style-type: none;
+				margin-left: -15%;
+				font-size: 1.6rem;
+			}
+		}
+		.item-link {
+			text-decoration: none;
+			display: block;
+			color: black;
+			font-size: 1.8rem;
+			line-height: 21px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.other .row {
+		display: inline;
+	}
+	.item-link {
+		display: block;
+	}
+	.other {
+		margin-bottom: 8rem;
+		&-vigoda {
+			font-size: 2rem;
+			margin-top: 3rem;
+		}
+		&-dobav {
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+		}
+		&-img {
+			width: 247px;
+		}
+		.price-block {
+			border: 1px solid #5D5D5D;
+			width: 248px;
+			margin: 0 auto;
+			margin-bottom: 2rem;
+		}
+		.descp-block {
+			height: 19rem;
+			padding: 0 1rem;
+			h3 {
+				font-size: 1.9rem;
+			}
+			&-list {
+				list-style-type: none;
+				margin-left: -15%;
+				font-size: 1.6rem;
+			}
+		}
+		.item-link {
+			text-decoration: none;
+			display: block;
+			color: black;
+			font-size: 1.8rem;
+			line-height: 21px;
+		}
+	}
+}
