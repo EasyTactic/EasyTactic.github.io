@@ -23,6 +23,7 @@ body {
 }
 .all-thanks-contant {
   background: url(../img/thanks.jpg) repeat;
+  min-height: 100vh;
 }
 .main {
   text-align: center;
