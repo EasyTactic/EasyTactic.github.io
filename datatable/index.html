@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<title>Личный кабинет</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="css/fontello.css">
+  	<link rel="stylesheet" href="css/fontello-embedded.css">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		
+			<div class="container main-all">
+
+				<div class="header">
+					<ul class="mob-nav">
+						<li class="flex nav__item"><a href="#">Категории</a></li>
+						<li class="flex nav__item"><a href="#">Товары</a></li>
+						<li class="flex nav__item"><a href="#">Свойства</a></li>
+						<li class="flex nav__item"><a href="#">Опции</a></li>
+						<li class="flex nav__item"><a href="#">Фильтры</a></li>
+					</ul>
+					<div class="main-head flex">
+						<div class="header-left-block col-xl-6 col-lg-7 flex">
+							<div class="home-block flex">
+								<a href="#"><i class="icon-home"></i></a>
+							</div>
+							<div class="list flex">
+								<ul class="top-nav flex">
+									<li class="flex"><a href="#">Категории</a></li>
+									<li class="flex"><a href="#">Товары</a></li>
+									<li class="flex"><a href="#">Свойства</a></li>
+									<li class="flex else"><a href="#">Опции</a></li>
+									<li class="flex else"><a href="#">Фильтры</a></li>
+									<input type="checkbox" id="else-checkbox" class="else-top-checkbox" onchange="elseFun()">
+									<li class="flex else-li">
+										<label for="else-checkbox" class="else-label">Ещё...</label>
+									</li>
+								</ul>
+								<div class="mob-all">
+										<input type="checkbox" id="burger"  class="nav-burger__checkbox" onchange="mainFun()">
+										<label for="burger" class="nav-burger"><i class="icon-menu mob-icon"></i></label>
+								</div>
+							</div>
+						</div>
+						<div class="header-right-block offset-xl-3 offset-lg-2 col-xl-3 col-lg-3 flex">
+							<input type="text" class="search" placeholder="Найти запись">
+							<div class="account-block flex">
+								<ul class="account-list flex style-menu">
+									<li><a href="#">некий пункт 1</a></li>
+									<li><a href="#">некий пункт 2</a></li>
+									<li><a href="#">некий пункт 3</a></li>
+								</ul>
+								<input type="checkbox" id="account-list__checkbox" class="accheck" onchange="accFun()">
+								<label for="account-list__checkbox" class="account flex">
+									<i class="icon-user"></i>
+									<i class="icon-down"></i>	
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="under-head flex">
+						<div class="uh-left-side flex col-lg-3 col-xl-3 col-md-3">
+							<div class="strange-think-block flex">
+								<input type="checkbox" class="nav-burger__checkbox" id="uh-burger" onchange="btnsFun()">
+								<label for="uh-burger" class="nav-burger nav-uh-burger"><i class="icon-menu mob-icon"></i></label>
+								<div class="btns-mob style-menu">
+									<button class="top-btn btn btn-primary varvar flex"><label for="bt1-checkbox">Варианты <i class="icon-down btn-down"></i></label></button>
+									<button class="top-btn other-btn btn">Записей</button>
+									<button class="top-btn other-btn btn ">Добавить</button>
+									<button class="top-btn other-btn btn">Колонки</button>
+									<button class="top-btn other-btn btn">Действия</button>
+								</div>
+
+							</div>
+							<b class="caption">Варианты</b>
+						</div>
+						<ul class="btns-list flex style-menu">
+							<li><a href="#">вариант 1</a></li>
+							<li><a href="#">вариант 2</a></li>
+							<li><a href="#">вариант 3</a></li>
+						</ul>
+						<div class="uh-right-side flex offset-xl-3 offset-md-0 offset-lg-1 col-md-9 col-lg-8 col-xl-6">
+							<div class="buttons flex">
+								<input type="checkbox" id="bt1-checkbox" onchange="varFun()">
+								<button class="top-btn btn btn-primary varvar flex"><label for="bt1-checkbox">Варианты <i class="icon-down btn-down"></i></label></button>
+								<button class="top-btn other-btn btn">Добавить</button>
+								<input type="checkbox" id="zapisey" onchange="zapFun()">
+								<button class="top-btn other-btn btn"><label for="zapisey">Записей</label></button>
+								<button class="top-btn other-btn btn">Колонки</button>
+								<button class="top-btn other-btn btn">Действия</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<style>
+					.buttons-columnVisibility:last-child, .buttons-columnVisibility:first-child, .buttons-columnVisibility:second-child {
+							display: none !important;
+						}
+				</style>
+				<div class="content">
+					<div class="tb-wrap">		
+						<table width="100%" id="table" bordercolor="#E7E7E7" border="2" align="center">
+							<thead class="first-row">
+								
+								<td class="table-first col-lg-1 all" width="48px" align="center" data-orderable="false">
+									<input type="checkbox" id="main-chb" class="fst-chbox">
+								</td>
+								<td class="the-first"></td>
+								<td class="table-cenetr min-tablet-l" align="center" data-orderable="false"><span class="table-captions table-photos " width="90px">Фото</span></td>
+								<td class="table-cenetr table-art not-mobile" align="center"><span class="table-captions">Артикул</span></td>
+								<td class="table-cenetr table-tovar" align="center"><span class="table-captions">Товар</span></td>
+								<td class="table-cenetr table-price pr-fst not-mobile" align="center"><span class="table-captions">Цена</span></td>
+								<td class="table-cenetr table-status min-tablet-l" width="80px" align="center"><span class="table-captions">Статус</span></td>
+								<td class="table-end all" width="30px" align="center" data-orderable="false" >
+								</td>
+							</thead>
+							<tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>123456789012345</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №4фцыфвфцввпраыыфФ </span></td>
+								<td class="table-cenetr table-price" align="center"><span>99 000.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №1</span></td>
+								<td class="table-cenetr table-price never" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №1</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №1</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №1</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №1</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr><tr>
+								<td class="table-first" width="50px" align="center"><input type="checkbox" class="oth-check"></td>
+								<td class="tb-plus"></td>
+								<td class="table-cenetr table-photo" align="center"><i class="icon-eye"></i></p></td>
+								<td class="table-cenetr table-art" align="center">
+									<p>АБВГДЕЁ1234536789</p></td>
+								<td class="table-cenetr table-tovar"><span>Товар №3</span></td>
+								<td class="table-cenetr table-price" align="center"><span>5 200.00</span></td>
+								<td class="table-cenetr all table-status" align="center"><span>Вкл<i class="icon-down btn-down"></i></span></td>
+								<td class="table-end all" align="center">
+									<input type="checkbox" id="cog-ChBox-1" onchange="chbFun()" class="cog-chbox">
+									<label for="cog-ChBox-1" class="chbox-cog">
+										<i class="icon-cog"></i>
+									</label>
+									<div class="cog-menu cog-menu1">
+										<ul class="cog-list">
+											<li>Настройка 1</li>
+											<li>Настройка 2</li>
+											<li>Настройка 3</li>
+										</ul>
+									</div></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="overflow"></div>
+			<div class="container footer-cont">
+				<footer class="col-xl-12 flex">
+					<div class="ft-left flex col-lg-3 col-xl-3 col-md-8 col-xs-12">
+					</div>
+				</footer>
+			</div>
+			<div class="dt-button-background"></div>
+		<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+		<script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+		<script src="https://cdn.datatables.net/colreorder/1.4.1/js/dataTables.colReorder.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="js/script.js" defer></script>
+		<script>
+			document.getElementsByClassName("buttons-collection").innerHTML="Новый текст!";
+		</script>
+	</body>
+</html>
