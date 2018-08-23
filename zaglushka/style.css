@@ -27,7 +27,8 @@ body {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	padding-top: 130px;
+	-ms-align-items: center;
+	align-items: center;
 	transition: .4s;
 }
 .fst-half {
