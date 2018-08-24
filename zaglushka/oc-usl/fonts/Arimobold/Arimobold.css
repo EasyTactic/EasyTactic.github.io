@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Arimobold';
+    src: url('fonts/Arimobold.eot');
+    src: url('fonts/Arimobold.eot') format('embedded-opentype'),
+         url('fonts/Arimobold.woff2') format('woff2'),
+         url('fonts/Arimobold.woff') format('woff'),
+         url('fonts/Arimobold.ttf') format('truetype'),
+         url('fonts/Arimobold.svg#Arimobold') format('svg');
+}

@@ -1,0 +1,213 @@
+@media screen and (max-width: 1199px){
+	.whatdo_item-wrapper{
+		justify-content: space-around;
+	}
+	.consultation_item{
+		margin-top: 40px;
+	}
+	.tel span{
+		font-size: 13px;
+	}
+	.menu li a{
+		font-size: 12.4px;
+	}
+	.team_top-line{
+		margin-left: 148px;
+	}
+	.partners_items-wrapper{
+		justify-content: space-around;
+	}
+	.team_items-wrapper{
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 1079px){
+	.fa-bars{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		display: block;
+		right: 0;
+		top: -200px;
+		background: #0a1a2b;
+		padding: 20px 30px;
+		border-bottom: 1px solid #20516b;
+		border-left: 1px solid #20516b;
+		z-index: 5;
+	}
+	.menu li a{
+		font-size: 20px;
+	}
+	.menu li a:hover{
+		border-bottom: none;
+	}
+	.tel{
+		display: none;
+	}
+	.human-img{
+		top: 13px;
+    	right: 13px;
+	}
+	.contact-section .left-column{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.left-column{
+		display: none;
+	}
+	.whatdo_topline h1{
+		max-width: 472px;
+    	margin-left: 0;
+	}
+	.whatdo_item-wrapper{
+		justify-content: space-around;
+	}
+	.whyus_item-wrapper{
+		justify-content: flex-start;
+	}
+	.whyus_title{
+		margin-left: 0;
+		text-align: center;
+	}
+	.team_top-line{
+		margin-left: 0;
+	}
+	.team_items-wrapper{
+		justify-content: space-between;
+	}
+	.partners_item{
+		margin-left: 0;
+	}
+	.partners-title{
+		margin-left: 0;
+	}
+	.partners_items-wrapper{
+		justify-content: space-between;
+	}
+	.contact_content{
+		flex-direction: column;
+	}
+	.contact_title{
+		margin-left: 0;
+		text-align: center;
+	}
+	form{
+		padding-left: 0;
+	}
+	.social-links{
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 20px;
+	}
+	.human-img{
+		top: 13px;
+    	right: -90px;
+	}
+	.shield-img{
+		display: none;
+	}
+	.consultation_item{
+		width: 92%;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.human-img{
+		display: none;
+	}
+	.header_name{
+		text-align: center;
+	}
+	.header_title h1{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.header_text p{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.header_btns{
+		text-align: center;
+	}
+	.whatdo_topline h1{
+		font-size: 31px;
+	}
+	.whyus_item-last{
+		max-width: 500px;
+	}
+	.first-row{
+		align-items: center;
+	}
+	.team_top-line p{
+		display: none;
+	}
+	.contact-form{
+		margin-left: 0;
+	}
+	.social-links a{
+		font-size: 8px;
+	}
+	.social-links{
+		margin-left: 0;
+	}
+	.footer-content{
+		flex-direction: column;
+	}
+	.col-law strong, .col-check strong{
+		margin-top: 20px;
+		text-decoration: underline;
+	}
+	.col-socials span{
+		margin-bottom: 10px;
+	}
+	.consultation_item{
+		width: 61%;
+	}
+}
+
+@media screen and (max-width: 580px){
+	header{
+		min-height: 600px;
+	}
+	.header-text{
+		margin-top: 120px;
+	}
+	.whyus_item-wrapper{
+		justify-content: center;
+	}
+	.team_items-wrapper{
+		justify-content: center;
+	}
+	.team_top-line span{
+		font-size: 38px;
+		margin-left: 60px;
+	}
+	.partners_items-wrapper{
+		justify-content: space-around;
+	}
+	.whyus_item, .whyus_item-last{
+		max-width: 360px;
+	}
+}
+@media screen and (max-width: 435px){
+	.header_title h1{
+		font-size: 40px;
+	}
+	.header_text p{
+		font-size: 15px;
+	}
+	.header_btns a{
+		font-size: 10px;
+	}
+	.team_top-line span{
+		margin-right: 12px;
+	}
+}
+@media screen and (max-width: 365px){
+	form input{
+		width: 300px;
+	}
+}

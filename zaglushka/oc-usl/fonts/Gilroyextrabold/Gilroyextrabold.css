@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gilroyextrabold';
+    src: url('fonts/Gilroyextrabold.eot');
+    src: url('fonts/Gilroyextrabold.eot') format('embedded-opentype'),
+         url('fonts/Gilroyextrabold.woff2') format('woff2'),
+         url('fonts/Gilroyextrabold.woff') format('woff'),
+         url('fonts/Gilroyextrabold.ttf') format('truetype'),
+         url('fonts/Gilroyextrabold.svg#Gilroyextrabold') format('svg');
+}

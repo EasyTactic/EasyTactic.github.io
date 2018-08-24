@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Arimoreg';
+    src: url('fonts/Arimoreg.eot');
+    src: url('fonts/Arimoreg.eot') format('embedded-opentype'),
+         url('fonts/Arimoreg.woff2') format('woff2'),
+         url('fonts/Arimoreg.woff') format('woff'),
+         url('fonts/Arimoreg.ttf') format('truetype'),
+         url('fonts/Arimoreg.svg#Arimoreg') format('svg');
+}
