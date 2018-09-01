@@ -1,0 +1,73 @@
+body .main-block {
+  background: url(../img/night-bg.png) center center no-repeat;
+}
+body, html {
+	background: url(../img/night-bg-bg.png);
+}
+body .scaut {
+	color: #0091ff;
+	font-size: 17px;
+}
+.car {
+	display: none;
+	&.night-car {
+		display: inline-block;
+	}
+}
+body .footer .navigation li a {
+	color: #ffffff;
+}
+body .footer span {
+	color: #fff;
+}
+body .footer-line {
+	background-color: #fff;
+}
+.day-car {
+  display: none;
+}
+.orange-car-2 {
+	transform: translateX(48px);
+}
+.blue-car-2 {
+	transform: translateX(44px);
+}
+body .header-phones span {
+	color: #fff;
+}
+.night-logo {
+	display: block;
+}
+.day-logo {
+	display: none;
+}
+body .header .logo-block {
+	background-color: #fff;
+}
+@media (max-width: 991px) {
+	body .main-block {
+		background: url(../img/night-mobile-bg.png) center top no-repeat;
+	}
+	.logo-href img.night-logo {
+		height: 64px;
+		width: 152px;
+	}
+	.header-line {
+		display: block;
+		width: 1px;
+		height: 100%;
+		background-color: #0066b3;
+	}
+	body .header {
+		background-color: #0091ff;
+		.mobile-menu span {
+			background-color: #fff;
+		}
+	}
+	.day-phone {
+		display: none;
+	}
+	.night-phone {
+		display: block;
+	}
+}
